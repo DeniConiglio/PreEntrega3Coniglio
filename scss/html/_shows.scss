@@ -1,0 +1,42 @@
+@import "base/vars";
+@import "base/mixin";
+
+/*-----------SHOWS----------*/
+.contenedorShows {
+    @include contenedores-grid;
+
+    grid-template-areas:
+        "headerShows"
+        "main"
+        "footerShows";
+
+    header {
+        grid-area: headerShows;
+        h1:hover {
+            transform: rotate(360deg);
+            transition: 2s;
+        }
+    }
+
+    main {
+        grid-area: main;
+        .shows {
+            border-style: dashed;
+            border-color: $color-principal;
+            border-radius: 50px;
+            margin: 0 15px;
+        }
+
+        button {
+            background-color: $color-secundario;
+            border-radius: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    footer{
+        grid-area: footerShows;
+    }
+}

@@ -1,0 +1,27 @@
+@import "base/vars";
+@import "base/mixin";
+
+/*----------CONTACTO----------*/
+.contenedorContacto {
+    @include contenedores-grid;
+
+    grid-template-areas:
+        "headerContacto"
+        "main"
+        "footerContacto";
+
+
+    header {
+        grid-area: headerContacto;
+        h1:hover {
+            transform: rotate(360deg);
+            transition: 2s;
+        }
+    }
+    main{
+        grid-area: main;
+    }
+    footer{
+        grid-area: footerContacto;
+    }
+}

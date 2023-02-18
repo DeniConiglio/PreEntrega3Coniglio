@@ -1,0 +1,45 @@
+@import "base/vars";
+@import "base/mixin";
+
+/*-----------NOSOTROS----------*/
+/* estilo de container */
+.contenedorNosotros {
+    @include contenedores-grid;
+
+    grid-template-areas:
+        "headerNosotros"
+        "main"
+        "footerNosotros";
+
+    header {
+        grid-area: headerNosotros;
+
+        main ul {
+            padding: 0;
+            
+            li {
+                text-align: center;
+            }
+        }
+    }
+
+    main {
+        grid-area: main;
+        color: white;
+
+        .info {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .listaInt{
+            ul{
+                padding: 0;
+            }
+        }
+    }
+
+    footer {
+        grid-area: footerNosotros;
+    }
+}

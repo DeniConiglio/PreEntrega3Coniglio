@@ -1,0 +1,42 @@
+/*DISCOS*/
+@import "base/vars";
+@import "base/mixin";
+
+.contenedorDiscos {
+    @include contenedores-grid;
+
+    grid-template-areas:
+        "headerDisc"
+        "galeria"
+        "footerDisc";
+
+    header {
+        grid-area: headerDisc;
+        margin-top: 20px;
+    }
+
+    main {
+        grid-area: galeria;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 1em;
+
+        .disco {
+            position: relative;
+
+            img {
+                @include medidas(100%, auto);
+                box-shadow: 2px 2px 5px #999;
+            }
+        }
+    }
+
+    footer {
+        nav {
+            a {
+                grid-area: footerDisc;
+                text-align: center;
+            }
+        }
+    }
+}

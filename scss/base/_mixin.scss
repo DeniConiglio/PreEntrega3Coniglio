@@ -1,0 +1,11 @@
+@mixin contenedores-grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2 1fr auto;
+}
+
+@mixin medidas($ancho, $alto) {
+    width: $ancho;
+    height: $alto;
+}
